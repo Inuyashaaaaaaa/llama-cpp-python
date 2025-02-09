@@ -4,10 +4,10 @@ import llama_cpp.llama_tokenizer
 import gradio as gr
 
 llama = llama_cpp.Llama.from_pretrained(
-    repo_id="Qwen/Qwen1.5-0.5B-Chat-GGUF",
-    filename="*q8_0.gguf",
+    repo_id="unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF", #TheBloke/deepseek-coder-6.7B-instruct-GGUF Qwen/Qwen1.5-0.5B-Chat-GGUF
+    filename="*DeepSeek-R1-Distill-Llama-8B-Q8_0.gguf", # filename="*q8_0.gguf", 
     tokenizer=llama_cpp.llama_tokenizer.LlamaHFTokenizer.from_pretrained(
-        "Qwen/Qwen1.5-0.5B"
+        "unsloth/DeepSeek-R1-Distill-Llama-8B" #"Qwen/Qwen1.5-0.5B" #deepseek-ai/deepseek-coder-6.7b-instruct
     ),
     verbose=False,
 )
